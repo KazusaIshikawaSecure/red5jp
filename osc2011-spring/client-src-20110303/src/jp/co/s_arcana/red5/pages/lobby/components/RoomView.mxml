@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="304" height="134" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	
+	<s:Group id="galaxyBase" x="163" y="69">
+		<s:BitmapImage id="galaxy" smooth="true" source="@Embed('assets/lobby_galaxy.png')" d:userLabel="lobby_galaxy" x="-98" y="-35">
+			<s:filters>
+				<s:GlowFilter id="glowFilter" blurX="10.0" blurY="10.0" inner="false" color="0x5380d0" strength="1.5" alpha="0" quality="2" knockout="false"/>
+			</s:filters>
+		</s:BitmapImage>
+	</s:Group>
+	
+	<s:BitmapImage smooth="true" source="@Embed('assets/lobby_room_back.png')" d:userLabel="lobby_room_back" x="25" y="11"/>
+	<s:RichText id="txtName" color="#ffffff" fontFamily="Verdana" fontSize="11.5" kerning="off" lineHeight="52.15%" text="" d:userLabel="room_name" whiteSpaceCollapse="preserve" x="42" y="21"/>
+	<s:RichText id="txtCount" color="#ffffff" fontFamily="ＭＳ Ｐゴシック" fontSize="9.5" fontWeight="bold" kerning="off" lineHeight="92.3%" text="" d:userLabel="room_count" whiteSpaceCollapse="preserve" x="42" y="35" tabStops="S0"/>
+	<s:Button id="btnJoin" skinClass="jp.co.s_arcana.red5.pages.lobby.components.JoinButton" x="100" y="18"/>
+</s:Group>

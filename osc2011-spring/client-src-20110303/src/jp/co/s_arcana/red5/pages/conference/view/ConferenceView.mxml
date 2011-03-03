@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="432" xmlns:ns="jp.co.s_arcana.red5.pages.conference.*" xmlns:ns1="jp.co.s_arcana.red5.pages.conference.components.*">
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+
+	</fx:Declarations>
+<!--
+	<mx:Image x="0" y="0" source="assets/conference.jpg"/>
+-->	
+	
+	<s:Group width="50" height="50" y="395" id="swfBase" x="27">
+		<mx:SWFLoader x="-25" y="-25" width="50" height="50" source="assets/a_animation.swf" id="swfAnimation" />
+	</s:Group>
+	
+	<s:HGroup width="800" height="432">
+		<s:Group id="videoWindows" width="800" height="432">
+			<s:layout>
+				<s:BasicLayout/>
+			</s:layout>
+			<ns1:VideoWindow id="vw01" width="180" height="180" x="100" y="23">
+			</ns1:VideoWindow>
+			<ns1:VideoWindow id="vw02" width="180" height="180" x="307" y="40">
+			</ns1:VideoWindow>
+			<ns1:VideoWindow id="vw03" width="180" height="180" x="515" y="21">
+			</ns1:VideoWindow>
+			<ns1:VideoWindow id="vw04" width="180" height="180" x="100" y="219">
+			</ns1:VideoWindow>
+			<ns1:VideoWindow id="vw05" width="180" height="180" x="307" y="234">
+			</ns1:VideoWindow>
+			<ns1:VideoWindow id="vw06" width="180" height="180" x="515" y="219">
+			</ns1:VideoWindow>
+			
+		</s:Group>
+		
+	</s:HGroup>
+	
+	<s:Button id="btnBack" skinClass="jp.co.s_arcana.red5.pages.conference.components.ExitButton" x="728" y="340"/>
+	<s:Button label="update" id="btnUpdate" visible="false"/>
+</s:Group>

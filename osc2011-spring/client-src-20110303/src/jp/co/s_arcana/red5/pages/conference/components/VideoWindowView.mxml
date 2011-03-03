@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="180" height="180" contentBackgroundColor="#E1CDCD">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<s:BitmapImage smooth="true" source="@Embed('assets/video_back.png')"  x="3" y="2"/>
+	<s:BitmapImage smooth="true" source="@Embed('assets/video_name.png')"  x="7" y="5"/>
+	<s:BitmapImage id="bitmapNoise" smooth="false" source="@Embed('assets/video_noise.png')" x="10" y="30" width="160" height="120" visible="false"/>
+	
+	<mx:Image id="imageNoise" x="10" y="30" width="160" height="120"/>
+
+	<s:Label x="25" y="13" text="おなまえ" id="labelClientName" width="145" fontSize="11"/>
+
+	<s:VideoDisplay width="160" height="120" x="10" y="30" id="videoDisplay"/>
+	
+	<s:HSlider toolTip="Volume" x="35" y="155" width="160" id="volumeSlider" skinClass="jp.co.s_arcana.red5.pages.conference.components.VolumeSliderSkin" value="30" stepSize="1" minimum="0" maximum="100"/>
+	
+</s:Group>

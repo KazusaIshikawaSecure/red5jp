@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="220" height="42">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<s:BitmapImage smooth="true" source="@Embed('assets/login_back.png')" y="0" x="0"/>
+	<s:TextInput id="txtName" skinClass="jp.co.s_arcana.red5.pages.login.components.NameTextInput" x="6" y="5"/>
+	<s:Button id="btnLogin" skinClass="jp.co.s_arcana.red5.pages.login.components.LoginButton" x="150" y="6"/>
+</s:Group>
