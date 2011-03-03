@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="320" height="240">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<s:VideoDisplay x="0" y="0" id="videoDisplay" visible="false"/>
+	<s:ToggleButton x="10" y="-135" label="" id="togglePublish" skinClass="jp.co.s_arcana.red5.pages.conference.components.PublishButton"/>
+	<s:Label x="10" y="10" id="labelName" visible="false"/>
+</s:Group>

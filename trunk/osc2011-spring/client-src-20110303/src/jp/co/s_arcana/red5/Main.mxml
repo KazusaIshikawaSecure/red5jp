@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:ns="jp.co.s_arcana.red5.*" currentState="stateLogin" xmlns:ns1="jp.co.s_arcana.red5.pages.*" 
+			   width="800" height="432">
+	<fx:Style source="css/style.css" />
+	<fx:Script>
+		<![CDATA[
+			import jp.co.s_arcana.red5.utils.StateManager;
+		]]>
+	</fx:Script>
+	<s:states>
+		<s:State name="stateLogin"/>
+		<s:State name="stateLobby"/>
+		<s:State name="stateConference"/>
+		<s:State name="stateTransition"/>
+	</s:states>
+	<s:transitions>
+		<s:Transition>
+			<s:Parallel>
+				<s:Fade targets="{[stateLogin, stateLobby, stateConference, stateTransition]}" />
+			</s:Parallel>
+		</s:Transition>
+	</s:transitions>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<ns1:StateLogin includeIn="stateLogin" x="0" y="0" id="stateLogin">
+	</ns1:StateLogin>
+	<ns1:StateLobby includeIn="stateLobby" x="0" y="0" id="stateLobby">
+	</ns1:StateLobby>
+	<ns1:StateConference includeIn="stateConference" x="0" y="0" id="stateConference">
+	</ns1:StateConference>
+	<ns1:StateTransition includeIn="stateTransition" x="0" y="0" id="stateTransition">
+	</ns1:StateTransition>
+</s:Application>

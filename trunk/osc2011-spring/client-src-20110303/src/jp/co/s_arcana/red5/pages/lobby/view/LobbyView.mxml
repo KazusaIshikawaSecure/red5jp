@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="432" xmlns:ns="jp.co.s_arcana.red5.pages.lobby.components.*">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<!--<s:Label x="10" y="10" text="部屋の一覧"/>-->
+	
+	<s:List x="0" y="20" id="listRoom" borderVisible="false" skinClass="jp.co.s_arcana.red5.pages.lobby.components.RoomSkin" >
+		<s:itemRenderer>
+			<fx:Component>
+				<s:ItemRenderer autoDrawBackground="false" height="110">
+					<!--<mx:Label text="{data.label} ({data.count})" height="20" />-->
+					<ns:Room room_name="{data.label}" room_count="{data.count}" x="{data.x}" y="{data.y}" />
+				</s:ItemRenderer>
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+	<s:Button x="149" y="30" label="入る" id="btnJoinRoom" visible="false"/>
+
+	<s:Label x="10" y="113" text="部屋を作る" visible="false"/>
+	<s:TextInput x="10" y="133" id="txtNewRoomName" visible="false"/>
+	<s:Button x="149" y="134" label="作る" id="btnCreateRoom" visible="false"/>
+	
+	<!--
+	<components:Room x="132" y="135" id="room01">
+	</components:Room>
+	<components:Room x="340" y="36" id="room02">
+	</components:Room>
+	<components:Room x="340" y="264" id="room03">
+	</components:Room>
+	-->
+	
+</s:Group>
